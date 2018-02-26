@@ -18,6 +18,8 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     
+    var sessionState : Int = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -79,12 +81,26 @@ class SignUpVC: UIViewController {
                     // Set the user reference to be the previously created User Model
                     userRef.setValue(userModel.convertAnyObject())
                     
-                    // Go to the Home Page
-                    let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                    // Go to the Login Page
+                    //let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "Login")
                     
-                    self.present(homeVC!, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "Login", sender: nil)
+                    
+                    //self.present(loginVC!, animated: true, completion: nil)
                 }
             }
+        }
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Login" {
+            let loginVC : LoginVC = segue.destination as! LoginVC
+            
+            loginVC.sessionState = 1
         }
     }
 }

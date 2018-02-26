@@ -1,8 +1,8 @@
 //
-//  HomeVC.swift
+//  VerifyVC.swift
 //  Dash Transportation
 //
-//  Created by Tyler Yun on 2/24/18.
+//  Created by Tyler Yun on 2/25/18.
 //  Copyright © 2018 Dash Transportation. All rights reserved.
 //
 
@@ -10,19 +10,17 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-// TO-DO : Only checks if the email is verified once; Need to find a way
-// to constantly refresh so that isEmailVerified is updated
+// NOTE : Email Verification has a delay compared with the Refresh Button
 
-class HomeVC: UIViewController {
+class VerifyVC: UIViewController {
 
+    @IBOutlet weak var verifyStatus: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        checkIfEmailVerified();
+        checkIfEmailVerified()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,20 +31,24 @@ class HomeVC: UIViewController {
     func checkIfEmailVerified() {
         // Refresh the user
         FIRAuth.auth()?.currentUser?.reload()
-
+        
         // Determine if the email has been verified or not
         if !(FIRAuth.auth()?.currentUser?.isEmailVerified)! {
-            // Go to the Verify Page
-            let verifyVC = self.storyboard?.instantiateViewController(withIdentifier: "Verify")
-            
-            self.present(verifyVC!, animated: true, completion: nil)
+            print("Still Not Verified")
         }
         else {
-            print("VERIFIED")
+            verifyStatus.text = "Email Verified... Redirecting"
+            
+            // Go to the Home Page
+            let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            
+            self.present(homeVC!, animated: true, completion: nil)
         }
     }
-    
 
+    @IBAction func checkIfEmailVerified(_ sender: Any) {
+        checkIfEmailVerified()
+    }
     /*
     // MARK: - Navigation
 
