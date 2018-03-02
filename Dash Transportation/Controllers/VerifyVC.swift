@@ -9,15 +9,22 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleMaps
 
 // NOTE : Email Verification has a delay compared with the Refresh Button
 
 class VerifyVC: UIViewController {
 
+    @IBOutlet var verifyLabel: UILabel!
     @IBOutlet weak var verifyStatus: UILabel!
+    
+    @IBOutlet var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        verifyLabel.lineBreakMode = .byWordWrapping // or NSLineBreakMode.ByWordWrapping
+        verifyLabel.numberOfLines = 0
+        
 
         // Do any additional setup after loading the view.
         checkIfEmailVerified()
@@ -26,6 +33,15 @@ class VerifyVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateButton() {
+        registerButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        
+    }
+    
+    @IBAction func registrationAction(_ sender: Any) {
+        performSegue(withIdentifier: "back_to_register", sender: self)
     }
     
     func checkIfEmailVerified() {
@@ -49,6 +65,7 @@ class VerifyVC: UIViewController {
     @IBAction func checkIfEmailVerified(_ sender: Any) {
         checkIfEmailVerified()
     }
+
     /*
     // MARK: - Navigation
 

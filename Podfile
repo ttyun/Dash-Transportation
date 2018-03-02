@@ -19,5 +19,12 @@ target 'Dash Transportation' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '11.1'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  
 
 end

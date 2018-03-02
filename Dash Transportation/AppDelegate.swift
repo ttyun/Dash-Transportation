@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import GooglePlaces
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Entry point for Google Maps SDK - Simon
+        GMSServices.provideAPIKey("AIzaSyDf17oxV0bLcGrHWjLHGpUnvVieFIka_wU")
+        
+        //Entry point for Google Places SDK - Simon
+        GMSPlacesClient.provideAPIKey("AIzaSyDwBdhREHmyV0mLo7viu56iVDXoYiO6yGg")
+        GMSServices.provideAPIKey("AIzaSyDwBdhREHmyV0mLo7viu56iVDXoYiO6yGg")
+        
+        
         // Entry point of Firebase SDK's
         FIRApp.configure()
         return true

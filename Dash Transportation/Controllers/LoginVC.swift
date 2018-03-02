@@ -84,7 +84,6 @@ class LoginVC: UIViewController {
     func updateButton() {
         logInButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
         
-        
     }
     
     @IBAction func loginUser(_ sender: Any) {

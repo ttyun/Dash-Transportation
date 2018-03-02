@@ -9,32 +9,39 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import MapKit
+import GoogleMaps //api used to display our map using Google Maps API
+import GooglePlaces //api used to get current location of device
+
+
 
 // TO-DO : Only checks if the email is verified once; Need to find a way
 // to constantly refresh so that isEmailVerified is updated
 
 class HomeVC: UIViewController {
 
-    @IBOutlet var mainMap: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        pinPoint()
         // Do any additional setup after loading the view.
+        
+        
+        //defines map, and zooms in on a particular area defined by 'withLatitude' and 'longitude'
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.60, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        
+        //makes our viewController a full screen map
+        view = mapView
+        
+        
+        //defines a marker for our map, and places a pointer on specific latitude and longitude
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
     }
     
-    func pinPoint() {
-        let annotation = MKPointAnnotation()
-        
-        let latitude = 35.3050
-        let longitude = -120.6625
-        
-        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        mainMap.showAnnotations([annotation], animated: true)
-        
-        
-    }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         checkIfEmailVerified();

@@ -17,17 +17,29 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet var signUpButton: UIButton!
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        performSegue(withIdentifier: "back_to_home", sender: self)
+    }
     
     var sessionState : Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        updateButton()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateButton() {
+        signUpButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        
     }
 
     @IBAction func signUpUser(_ sender: Any) {
