@@ -9,16 +9,31 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import MapKit
 
 // TO-DO : Only checks if the email is verified once; Need to find a way
 // to constantly refresh so that isEmailVerified is updated
 
 class HomeVC: UIViewController {
 
+    @IBOutlet var mainMap: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pinPoint()
         // Do any additional setup after loading the view.
+    }
+    
+    func pinPoint() {
+        let annotation = MKPointAnnotation()
+        
+        let latitude = 35.3050
+        let longitude = -120.6625
+        
+        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        mainMap.showAnnotations([annotation], animated: true)
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
