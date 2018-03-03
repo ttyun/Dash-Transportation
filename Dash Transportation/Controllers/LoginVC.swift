@@ -37,6 +37,11 @@ let nearmidnight_today = now.dateAt(hours:23, minutes: 59)
 
 class LoginVC: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     @IBOutlet var logInButton: UIButton!
     
     @IBOutlet weak var emailField: UITextField!

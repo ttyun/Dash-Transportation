@@ -14,6 +14,10 @@ import GoogleMaps
 // NOTE : Email Verification has a delay compared with the Refresh Button
 
 class VerifyVC: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBOutlet var verifyLabel: UILabel!
     @IBOutlet weak var verifyStatus: UILabel!
@@ -40,10 +44,7 @@ class VerifyVC: UIViewController {
         
     }
     
-    @IBAction func registrationAction(_ sender: Any) {
-        performSegue(withIdentifier: "back_to_register", sender: self)
-    }
-    
+   
     func checkIfEmailVerified() {
         // Refresh the user
         FIRAuth.auth()?.currentUser?.reload()

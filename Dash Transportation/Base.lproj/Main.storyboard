@@ -258,7 +258,7 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oh no! Looks like your email isn't registered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owb-3E-6aH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please verify your account on the email provided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owb-3E-6aH">
                                 <rect key="frame" x="63" y="268" width="249" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -269,13 +269,11 @@
                                 <rect key="frame" x="112" y="615" width="151" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="35"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Refresh">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="checkIfEmailVerified:" destination="1oh-00-a8C" eventType="touchUpInside" id="ImV-fm-2Gk"/>
-                                    <action selector="registrationAction:" destination="1oh-00-a8C" eventType="touchUpInside" id="9Pw-P7-0So"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="back_to_register" id="a89-mE-dL9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -295,6 +293,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Jcj-eK-9Fn"/>
-        <segue reference="wdf-eF-1Au"/>
     </inferredMetricsTieBreakers>
 </document>
