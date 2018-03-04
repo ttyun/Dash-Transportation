@@ -19,9 +19,6 @@ import GooglePlaces //api used to get current location of device
 
 class HomeVC: UIViewController {
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +26,21 @@ class HomeVC: UIViewController {
         
         
         //defines map, and zooms in on a particular area defined by 'withLatitude' and 'longitude'
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.60, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 35.3050, longitude: -120.6625, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
         //makes our viewController a full screen map
         view = mapView
         
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
+
+        
         
         //defines a marker for our map, and places a pointer on specific latitude and longitude
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.position = CLLocationCoordinate2D(latitude: 35.298499, longitude: -120.659908)
+        marker.title = "Scooter"
         marker.map = mapView
     }
     
