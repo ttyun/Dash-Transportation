@@ -23,6 +23,9 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet var signUpButton: UIButton!
     
+    @IBAction func backButton(_ sender: Any) {
+        performSegue(withIdentifier: "backLogin", sender: self)
+    }
     
     @IBAction func backPressed(_ sender: Any) {
         performSegue(withIdentifier: "back_to_home", sender: self)

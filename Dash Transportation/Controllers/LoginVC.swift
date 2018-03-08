@@ -60,6 +60,7 @@ class LoginVC: UIViewController {
         //print(FIRAuth.auth()?.currentUser?.email)
         
         printGreeting()
+        updateButton()
         print(sessionState)
         if sessionState == 1 {
             FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: nil)
@@ -88,6 +89,8 @@ class LoginVC: UIViewController {
     
     func updateButton() {
         logInButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        logInButton.layer.cornerRadius = 0.05 * logInButton.bounds.size.width
+        
         
     }
     
