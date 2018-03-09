@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
         
         
         //defines map, and zooms in on a particular area defined by 'withLatitude' and 'longitude'
-        let camera = GMSCameraPosition.camera(withLatitude: 35.3050, longitude: -120.6625, zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 35.3002115, longitude: -120.661867, zoom: 16.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
         //makes our viewController a full screen map
@@ -34,6 +34,7 @@ class HomeVC: UIViewController {
         
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
 
         
         
@@ -42,6 +43,12 @@ class HomeVC: UIViewController {
         marker.position = CLLocationCoordinate2D(latitude: 35.298499, longitude: -120.659908)
         marker.title = "Scooter"
         marker.map = mapView
+        
+        
+        let secondMarker = GMSMarker()
+        secondMarker.position = CLLocationCoordinate2D(latitude: 35.301924, longitude: -120.663826)
+        secondMarker.title = "Scooter"
+        secondMarker.map = mapView
     }
     
     
