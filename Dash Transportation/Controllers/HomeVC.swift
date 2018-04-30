@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import GoogleMaps //api used to display our map using Google Maps API
 import GooglePlaces //api used to get current location of device
+import CoreLocation
 
 
 
@@ -23,8 +24,10 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setUpMap()
         
-        
+    }
+    func setUpMap() {
         //defines map, and zooms in on a particular area defined by 'withLatitude' and 'longitude'
         let camera = GMSCameraPosition.camera(withLatitude: 35.3002115, longitude: -120.661867, zoom: 16.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -35,7 +38,7 @@ class HomeVC: UIViewController {
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
-
+        
         
         
         //defines a marker for our map, and places a pointer on specific latitude and longitude

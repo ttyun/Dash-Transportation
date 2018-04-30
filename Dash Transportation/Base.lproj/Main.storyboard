@@ -202,6 +202,13 @@
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O6-NB-LPi">
+                                <rect key="frame" x="133" y="474" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -232,6 +239,7 @@
                         <outlet property="greetingLabel" destination="OnH-Jy-8lu" id="CiS-Hr-XzR"/>
                         <outlet property="logInButton" destination="K5L-Xa-yX6" id="asE-F3-eyx"/>
                         <outlet property="passwordField" destination="dmn-dU-a60" id="Far-N9-fI7"/>
+                        <outlet property="speedTest" destination="IJe-kN-yQZ" id="0Yi-IP-OoJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSf-ZZ-3mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
