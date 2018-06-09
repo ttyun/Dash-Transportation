@@ -90,9 +90,10 @@ class SignUpVC: UIViewController {
                     let firstNameText = self.firstNameField.text
                     let lastNameText = self.lastNameField.text
                     let userStatus = 1
+                    let customerID = ""
                     
                     // Pass in the sign up information to our User Object Model; Models/Users.Swift
-                    let userModel = User(email: emailText!, username: usernameText!, firstName: firstNameText!, lastName: lastNameText!, userStatus: userStatus)
+                    let userModel = User(email: emailText!, username: usernameText!, firstName: firstNameText!, lastName: lastNameText!, userStatus: userStatus, customerID: customerID)
                     
                     // Create a reference user path using the current user id
                     let userRef = ref.child((FIRAuth.auth()?.currentUser?.uid)!)
@@ -100,12 +101,18 @@ class SignUpVC: UIViewController {
                     // Set the user reference to be the previously created User Model
                     userRef.setValue(userModel.convertAnyObject())
                     
-                    // Go to the Login Page
-                    //let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "Login")
                     
+                    
+                    // API call to create and push customer id
+                    let otherAPIInstance = OtherAPIClient();
+                    
+                    // pushed cid onto firebase db through an api call
+                    otherAPIInstance.createCustomerID(uid:(FIRAuth.auth()?.currentUser?.uid)!)
+                    
+                    
+                    // Go to the Login Page
                     self.performSegue(withIdentifier: "Login", sender: nil)
                     
-                    //self.present(loginVC!, animated: true, completion: nil)
                 }
             }
         }

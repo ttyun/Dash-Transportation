@@ -13,6 +13,8 @@
 		72004A5C204251EF00334E8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72004A5B204251EF00334E8C /* User.swift */; };
 		72004A5E204254EA00334E8C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72004A5D204254EA00334E8C /* HomeVC.swift */; };
 		72004A602042622B00334E8C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72004A5F2042622B00334E8C /* LoginVC.swift */; };
+		721D622420534C28007C46E1 /* HomeExtendedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D622320534C28007C46E1 /* HomeExtendedVC.swift */; };
+		721D62262053557C007C46E1 /* MainAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D62252053557C007C46E1 /* MainAPIClient.swift */; };
 		722C8AD820424639005DC45D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8AD720424639005DC45D /* AppDelegate.swift */; };
 		722C8ADA20424639005DC45D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8AD920424639005DC45D /* SignUpVC.swift */; };
 		722C8ADD20424639005DC45D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8ADB20424639005DC45D /* Main.storyboard */; };
@@ -21,6 +23,7 @@
 		722C8AED2042463A005DC45D /* Dash_TransportationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8AEC2042463A005DC45D /* Dash_TransportationTests.swift */; };
 		722C8AF82042463A005DC45D /* Dash_TransportationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8AF72042463A005DC45D /* Dash_TransportationUITests.swift */; };
 		722C8B0620424756005DC45D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 722C8B0520424756005DC45D /* GoogleService-Info.plist */; };
+		7292EDD22061C710001895B1 /* OtherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292EDD12061C710001895B1 /* OtherAPIClient.swift */; };
 		72B6AA382043E07C0063600E /* VerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B6AA372043E07C0063600E /* VerifyVC.swift */; };
 		E3AEC5AD591B0F2FB2B7C3D9 /* Pods_Dash_TransportationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D87AC1C5540B022582AAE9B /* Pods_Dash_TransportationTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,8 @@
 		72004A5B204251EF00334E8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72004A5D204254EA00334E8C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		72004A5F2042622B00334E8C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		721D622320534C28007C46E1 /* HomeExtendedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtendedVC.swift; sourceTree = "<group>"; };
+		721D62252053557C007C46E1 /* MainAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPIClient.swift; sourceTree = "<group>"; };
 		722C8AD420424639005DC45D /* Dash Transportation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dash Transportation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		722C8AD720424639005DC45D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722C8AD920424639005DC45D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		722C8AF72042463A005DC45D /* Dash_TransportationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dash_TransportationUITests.swift; sourceTree = "<group>"; };
 		722C8AF92042463A005DC45D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722C8B0520424756005DC45D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7292EDD12061C710001895B1 /* OtherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAPIClient.swift; sourceTree = "<group>"; };
 		72B6AA372043E07C0063600E /* VerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyVC.swift; sourceTree = "<group>"; };
 		8F7EE31AF74ECBD2B4B8246B /* Pods-Dash TransportationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash TransportationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dash TransportationUITests/Pods-Dash TransportationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FE439583D617F146BABC039 /* Pods-Dash Transportation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash Transportation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dash Transportation/Pods-Dash Transportation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				72004A5D204254EA00334E8C /* HomeVC.swift */,
 				72004A5F2042622B00334E8C /* LoginVC.swift */,
 				72B6AA372043E07C0063600E /* VerifyVC.swift */,
+				721D622320534C28007C46E1 /* HomeExtendedVC.swift */,
+				721D62252053557C007C46E1 /* MainAPIClient.swift */,
+				7292EDD12061C710001895B1 /* OtherAPIClient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -347,12 +356,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Dash Transportation/Pods-Dash Transportation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
@@ -507,10 +518,13 @@
 			files = (
 				722C8ADA20424639005DC45D /* SignUpVC.swift in Sources */,
 				72B6AA382043E07C0063600E /* VerifyVC.swift in Sources */,
+				721D622420534C28007C46E1 /* HomeExtendedVC.swift in Sources */,
 				72004A5E204254EA00334E8C /* HomeVC.swift in Sources */,
+				721D62262053557C007C46E1 /* MainAPIClient.swift in Sources */,
 				722C8AD820424639005DC45D /* AppDelegate.swift in Sources */,
 				72004A5C204251EF00334E8C /* User.swift in Sources */,
 				72004A602042622B00334E8C /* LoginVC.swift in Sources */,
+				7292EDD22061C710001895B1 /* OtherAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T284FY9YG5;
+				DEVELOPMENT_TEAM = FK7C3U7FYL;
 				INFOPLIST_FILE = "Dash Transportation/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -695,7 +709,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T284FY9YG5;
+				DEVELOPMENT_TEAM = FK7C3U7FYL;
 				INFOPLIST_FILE = "Dash Transportation/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,6 +10,7 @@ target 'Dash Transportation' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Stripe'
+  pod 'Alamofire'
 
   target 'Dash TransportationTests' do
     inherit! :search_paths

@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import Stripe
 
-class ChooseCardVC: UIViewController {
+class ChooseCardVC: UIViewController, STPPaymentContextDelegate {
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
+        <#code#>
+    }
+    
+    // This method is called when a user selects a new payment method
+    func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
+        <#code#>
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
+        <#code#>
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

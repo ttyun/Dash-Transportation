@@ -52,8 +52,6 @@ class HomeVC: UIViewController {
     }
     
     
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         checkIfEmailVerified();
     }

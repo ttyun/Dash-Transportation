@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="70H-RG-b5q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="70H-RG-b5q">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -193,7 +193,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginUser:" destination="70H-RG-b5q" eventType="touchUpInside" id="lzk-cU-vir"/>
-                                    <segue destination="SO1-5w-yto" kind="presentation" id="8dc-mF-oDq"/>
+                                    <segue destination="Eqp-pw-pyZ" kind="presentation" id="Fqv-Es-5YO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-Jy-8lu">
@@ -261,10 +261,58 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6c0-3V-5wH"/>
                     </view>
+                    <connections>
+                        <segue destination="Eqp-pw-pyZ" kind="presentation" id="LqK-Xp-BeK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNi-wG-GC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="115.27093596059113"/>
+            <point key="canvasLocation" x="738" y="-313"/>
+        </scene>
+        <!--Home ExtendedVC-->
+        <scene sceneID="8Et-uz-JsW">
+            <objects>
+                <viewController storyboardIdentifier="Payment" id="Eqp-pw-pyZ" customClass="HomeExtendedVC" customModule="Dash_Transportation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RC3-sQ-NxV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ6-ei-Pze">
+                                <rect key="frame" x="136" y="395" width="103" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Payment" image="stp_card_discover_template.png">
+                                    <color key="titleColor" red="0.53409618139266968" green="0.59629547595977783" blue="0.81492191553115845" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handlePaymentButtonTapped:" destination="Eqp-pw-pyZ" eventType="touchUpInside" id="1TV-7H-PMh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKP-Ks-Z7l">
+                                <rect key="frame" x="125" y="429" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-PX-DkD">
+                                <rect key="frame" x="145" y="467" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe3-2N-mPC">
+                                <rect key="frame" x="141" y="505" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Promotions"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AiI-bo-2Xx"/>
+                    </view>
+                    <connections>
+                        <outlet property="paymentButton" destination="YQ6-ei-Pze" id="NQS-CA-z61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk9-ye-f6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976.8" y="114.53201970443351"/>
         </scene>
         <!--VerifyVC-->
         <scene sceneID="hEw-H3-RdO">
@@ -274,8 +322,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please verify your account on the email provided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owb-3E-6aH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please verify your account on the email provided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owb-3E-6aH">
                                 <rect key="frame" x="63" y="268" width="249" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="syy-6q-E8d"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -291,7 +342,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Verify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-Qu-2UV">
-                                <rect key="frame" x="92" y="111" width="191" height="44.333333333333343"/>
+                                <rect key="frame" x="92" y="111" width="191" height="44"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="34"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -300,6 +351,8 @@
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="owb-3E-6aH" firstAttribute="top" secondItem="Lie-Qu-2UV" secondAttribute="bottom" constant="112.66666666666666" id="5Ws-7q-p5I"/>
+                            <constraint firstItem="owb-3E-6aH" firstAttribute="leading" secondItem="ESq-gT-wIZ" secondAttribute="leading" constant="63" id="7B0-Y0-is0"/>
+                            <constraint firstItem="owb-3E-6aH" firstAttribute="centerX" secondItem="Lie-Qu-2UV" secondAttribute="centerX" id="IBU-DZ-eeP"/>
                             <constraint firstItem="ESq-gT-wIZ" firstAttribute="trailing" secondItem="Lie-Qu-2UV" secondAttribute="trailing" constant="92" id="KIo-wd-JSL"/>
                             <constraint firstItem="ESq-gT-wIZ" firstAttribute="trailing" secondItem="6E6-4z-qkd" secondAttribute="trailing" constant="112" id="QpS-85-laD"/>
                             <constraint firstItem="6E6-4z-qkd" firstAttribute="top" secondItem="owb-3E-6aH" secondAttribute="bottom" constant="198" id="R9n-VX-S20"/>
@@ -321,7 +374,11 @@
             <point key="canvasLocation" x="648.79999999999995" y="956.89655172413802"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stp_card_discover_template.png" width="26" height="18"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Fqv-Es-5YO"/>
         <segue reference="Zun-NS-vkb"/>
     </inferredMetricsTieBreakers>
 </document>

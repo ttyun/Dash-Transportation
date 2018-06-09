@@ -125,9 +125,12 @@ class LoginVC: UIViewController {
                     print("Successful Log In")
                     
                     // Go to the Home Page
-                    let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    //let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     
-                    self.present(homeVC!, animated: true, completion: nil)
+                    //self.present(homeVC!, animated: true, completion: nil)
+                    let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "Payment")
+                    
+                    self.present(paymentVC!, animated: true, completion: nil)
                 }
             }
         }

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.0)
   - Firebase/Auth (3.15.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -45,6 +46,7 @@ PODS:
   - Stripe (12.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -54,6 +56,7 @@ DEPENDENCIES:
   - Stripe
 
 SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -67,6 +70,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   Stripe: f8e8feff38ba5caf7b2568c64eab96b0440ecb95
 
-PODFILE CHECKSUM: bd298ce580045eff5b6651037480a644ed21098c
+PODFILE CHECKSUM: a7065113cca00d7e2a02ca1601f725d06711824f
 
 COCOAPODS: 1.4.0

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import GoogleMaps
 import GooglePlaces
-
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyDwBdhREHmyV0mLo7viu56iVDXoYiO6yGg")
         GMSServices.provideAPIKey("AIzaSyDwBdhREHmyV0mLo7viu56iVDXoYiO6yGg")
         
+        // Entry point for Stripe SDK
+        //STPPaymentConfiguration.shared().publishableKey = "pk_test_7OcC0FO293KkuiwKKy1MuAkL"
+
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_7OcC0FO293KkuiwKKy1MuAkL"
         
         // Entry point of Firebase SDK's
         FIRApp.configure()
