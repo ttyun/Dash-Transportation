@@ -68,4 +68,27 @@ class MainAPIClient: NSObject, STPEphemeralKeyProvider {
             print(error.localizedDescription)
         }
     }
+    
+    func completeCharges(_ result: STPPaymentResult, amount: Int,
+                         description: String, customerId: String) {
+        
+        print("Amount: ---------- \(amount)")
+        print("CID: \(customerId)")
+        print(description)
+        
+        let url = self.baseURL + "/payment/createCharge/\(result.source.stripeID)/\(amount)/\(description)/\(customerId)"
+        print(url)
+        Alamofire.request(url, method: .post)
+            .validate(statusCode: 200..<300)
+            .responseJSON { responseJSON in
+                switch responseJSON.result {
+                case .success(let json):
+                    print("API WORKS!!!!")
+                    //completion(json as? [String: AnyObject], nil)
+                case .failure(let error):
+                    print("API DOES NOT WORK \(error)")
+                    //completion(nil, error)
+                }
+        }
+    }
 }

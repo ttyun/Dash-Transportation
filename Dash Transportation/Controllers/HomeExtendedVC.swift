@@ -10,7 +10,7 @@ import UIKit
 import Stripe
 
 class HomeExtendedVC: UIViewController, STPPaymentContextDelegate {
-
+    
     private let paymentContext: STPPaymentContext
     private let customerContext: STPCustomerContext
     
@@ -100,14 +100,21 @@ class HomeExtendedVC: UIViewController, STPPaymentContextDelegate {
         self.presentPaymentMethodsViewController()
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Pay" {
+            
+            if(paymentContext == nil) {
+                print("OMG ITS NIL")
+            }
+            
+            let paymentVC : PaymentVC =  segue.destination as! PaymentVC
+            paymentVC.paymentContext = paymentContext
+        }
     }
-    */
 
 }

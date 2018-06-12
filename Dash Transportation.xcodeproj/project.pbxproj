@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0448781F20CF540B00C171F0 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448781E20CF540B00C171F0 /* PaymentVC.swift */; };
 		26107F6C2046796E00924505 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 26107F6B2046796E00924505 /* Images */; };
 		350527303685BFD9531786D2 /* Pods_Dash_Transportation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59FD090284DE902A1B80A33 /* Pods_Dash_Transportation.framework */; };
 		569A23D32BBC56A1BE0399C3 /* Pods_Dash_TransportationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193D76CF7E65D800AC0F801 /* Pods_Dash_TransportationUITests.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0448781E20CF540B00C171F0 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		0A84A997294904B21A1B6CC9 /* Pods-Dash TransportationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash TransportationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dash TransportationTests/Pods-Dash TransportationTests.release.xcconfig"; sourceTree = "<group>"; };
 		255A0A8CB6E2CB98B49AE449 /* Pods-Dash Transportation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash Transportation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dash Transportation/Pods-Dash Transportation.release.xcconfig"; sourceTree = "<group>"; };
 		26107F6B2046796E00924505 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				72004A5F2042622B00334E8C /* LoginVC.swift */,
 				72B6AA372043E07C0063600E /* VerifyVC.swift */,
 				721D622320534C28007C46E1 /* HomeExtendedVC.swift */,
+				0448781E20CF540B00C171F0 /* PaymentVC.swift */,
 				721D62252053557C007C46E1 /* MainAPIClient.swift */,
 				7292EDD12061C710001895B1 /* OtherAPIClient.swift */,
 			);
@@ -519,6 +522,7 @@
 				722C8ADA20424639005DC45D /* SignUpVC.swift in Sources */,
 				72B6AA382043E07C0063600E /* VerifyVC.swift in Sources */,
 				721D622420534C28007C46E1 /* HomeExtendedVC.swift in Sources */,
+				0448781F20CF540B00C171F0 /* PaymentVC.swift in Sources */,
 				72004A5E204254EA00334E8C /* HomeVC.swift in Sources */,
 				721D62262053557C007C46E1 /* MainAPIClient.swift in Sources */,
 				722C8AD820424639005DC45D /* AppDelegate.swift in Sources */,
