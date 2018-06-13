@@ -10,6 +10,7 @@ target 'Dash Transportation' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Stripe'
+  pod 'Alamofire'
 
   target 'Dash TransportationTests' do
     inherit! :search_paths
@@ -20,6 +21,7 @@ target 'Dash Transportation' do
     inherit! :search_paths
     # Pods for testing
   end
+
   #Pods for Google Maps
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '11.1'
@@ -27,6 +29,4 @@ target 'Dash Transportation' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   
-  
-
 end

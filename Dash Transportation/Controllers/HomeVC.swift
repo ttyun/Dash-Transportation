@@ -18,7 +18,7 @@ import CoreLocation
 // TO-DO : Only checks if the email is verified once; Need to find a way
 // to constantly refresh so that isEmailVerified is updated
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, GMSMapViewDelegate {
     
 
     override func viewDidLoad() {
@@ -33,7 +33,9 @@ class HomeVC: UIViewController {
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
         //makes our viewController a full screen map
+        mapView.delegate = self
         view = mapView
+        
         
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
@@ -53,9 +55,6 @@ class HomeVC: UIViewController {
         secondMarker.title = "Scooter"
         secondMarker.map = mapView
     }
-    
-    
-    
     
     override func viewDidAppear(_ animated: Bool) {
         checkIfEmailVerified();
@@ -82,6 +81,13 @@ class HomeVC: UIViewController {
         }
     }
     
+    // MARK: GMSMapViewDelegate
+    
+    // Called after marker has been called
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.performSegue(withIdentifier: "trackRide", sender: nil)
+        return true
+    }
 
     /*
     // MARK: - Navigation

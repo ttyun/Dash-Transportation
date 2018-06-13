@@ -44,7 +44,6 @@ class LoginVC: UIViewController {
     
     @IBOutlet var speedTest: UIView!
     
-    speed
     @IBOutlet var logInButton: UIButton!
     
     @IBOutlet weak var emailField: UITextField!
